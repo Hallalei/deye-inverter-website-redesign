@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { Home, Building2 } from "lucide-react"
+import { getAssetPath } from "@/lib/utils"
 
 export function Solutions() {
   const solutions = [
@@ -7,7 +8,7 @@ export function Solutions() {
       title: "住宅储能系统",
       subtitle: "Residential Energy Storage",
       description: "完整的家庭储能解决方案，最大化自发自用，提供备用电源保障",
-      image: "/modern-house-with-solar-panels-and-battery-storage.jpg",
+      image: getAssetPath("/modern-house-with-solar-panels-and-battery-storage.jpg"),
       icon: Home,
       stats: [
         { label: "功率", value: "5-20kW" },
@@ -18,7 +19,7 @@ export function Solutions() {
       title: "商业光伏系统",
       subtitle: "Commercial PV Systems",
       description: "可扩展的商业太阳能解决方案，降低能源成本，减少碳足迹",
-      image: "/commercial-building-solar.png",
+      image: getAssetPath("/commercial-building-solar.png"),
       icon: Building2,
       stats: [
         { label: "功率", value: "30-500kW" },
@@ -29,7 +30,7 @@ export function Solutions() {
       title: "住宅光伏系统",
       subtitle: "Residential PV Systems",
       description: "高效的住宅太阳能系统，实现可持续且经济的清洁能源",
-      image: "/residential-rooftop-solar-panel-installation.jpg",
+      image: getAssetPath("/residential-rooftop-solar-panel-installation.jpg"),
       icon: Home,
       stats: [
         { label: "功率", value: "3-10kW" },
@@ -40,7 +41,7 @@ export function Solutions() {
       title: "商业储能系统",
       subtitle: "Commercial Energy Storage",
       description: "先进的储能解决方案，适用于商业和工业应用场景",
-      image: "/large-commercial-battery-storage-system.jpg",
+      image: getAssetPath("/large-commercial-battery-storage-system.jpg"),
       icon: Building2,
       stats: [
         { label: "功率", value: "100kW-2.5MW" },
@@ -70,7 +71,7 @@ export function Solutions() {
                 {/* 图片容器 */}
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <img
-                    src={solution.image || "/placeholder.svg"}
+                    src={solution.image || getAssetPath("/placeholder.svg")}
                     alt={solution.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

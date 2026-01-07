@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { getAssetPath } from "@/lib/utils"
 
 export function Products() {
   const products = [
@@ -8,7 +9,7 @@ export function Products() {
       title: "混合逆变器",
       subtitle: "Hybrid Inverter",
       description: "先进的混合逆变器，无缝集成太阳能和储能系统",
-      image: "/modern-hybrid-solar-inverter-device.jpg",
+      image: getAssetPath("/modern-hybrid-solar-inverter-device.jpg"),
       badge: "热销",
       specs: ["3kW-80kW", "效率98%+", "智能并网"],
     },
@@ -16,14 +17,14 @@ export function Products() {
       title: "组串式逆变器",
       subtitle: "String Inverter",
       description: "高性能组串式逆变器，适用于商业和住宅应用",
-      image: "/string-solar-inverter-system-installation.jpg",
+      image: getAssetPath("/string-solar-inverter-system-installation.jpg"),
       specs: ["1.5kW-136kW", "IP65防护", "VSG功能"],
     },
     {
       title: "微型逆变器",
       subtitle: "Microinverter",
       description: "紧凑型微型逆变器，组件级最大能量收集",
-      image: "/microinverter-solar-panel-close-up.jpg",
+      image: getAssetPath("/microinverter-solar-panel-close-up.jpg"),
       badge: "新品",
       specs: ["300W-2250W", "组件级MPPT", "易安装"],
     },
@@ -31,7 +32,7 @@ export function Products() {
       title: "储能系统",
       subtitle: "Energy Storage",
       description: "完整的储能解决方案，安全可靠长寿命",
-      image: "/battery-energy-storage-system-cabinet.jpg",
+      image: getAssetPath("/battery-energy-storage-system-cabinet.jpg"),
       specs: ["模块化设计", "长寿命", "智能管理"],
     },
   ]
@@ -55,7 +56,7 @@ export function Products() {
               {/* 产品图片 */}
               <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                 <img
-                  src={product.image || "/placeholder.svg"}
+                  src={product.image || getAssetPath("/placeholder.svg")}
                   alt={product.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

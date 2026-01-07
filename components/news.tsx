@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, ArrowRight } from "lucide-react"
+import { getAssetPath } from "@/lib/utils"
 
 export function News() {
   const newsItems = [
@@ -8,8 +9,8 @@ export function News() {
       category: "公司新闻",
       date: "2025年10月8日",
       title: "绿色产业，光明未来：德业2025迪拜经销商峰会圆满举办",
-      excerpt: "2025年11月，德业集团在迪拜成功举办了“绿色产业，光明未来”经销商峰会，汇聚全球合作伙伴共商发展大计",
-      image: "/business-conference-dubai-skyline.jpg",
+      excerpt: "2025年11月，德业集团在迪拜成功举办了"绿色产业，光明未来"经销商峰会，汇聚全球合作伙伴共商发展大计",
+      image: getAssetPath("/business-conference-dubai-skyline.jpg"),
       featured: true,
     },
     {
@@ -17,14 +18,14 @@ export function News() {
       date: "2025年10月8日",
       title: "德业马来西亚柔佛制造基地正式破土动工",
       excerpt: "2024年10月2日，德业集团马来西亚柔佛制造基地正式破土动工，这是德业全球化战略的重要一步",
-      image: "/manufacturing-facility-groundbreaking-ceremony.jpg",
+      image: getAssetPath("/manufacturing-facility-groundbreaking-ceremony.jpg"),
     },
     {
       category: "产品创新",
       date: "2025年9月26日",
       title: "德业储能解决方案荣获创新奖",
       excerpt: "TÜV莱茵授予德业模块化工商业储能解决方案2025年全质量保障创新奖",
-      image: "/industrial-energy-storage-containers.jpg",
+      image: getAssetPath("/industrial-energy-storage-containers.jpg"),
     },
   ]
 
@@ -51,7 +52,7 @@ export function News() {
             >
               <div className={`relative overflow-hidden bg-muted ${item.featured ? "aspect-[16/10]" : "aspect-video"}`}>
                 <img
-                  src={item.image || "/placeholder.svg"}
+                  src={item.image || getAssetPath("/placeholder.svg")}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles } from "lucide-react"
+import { getAssetPath } from "@/lib/utils"
 
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-background">
       <div className="absolute inset-0">
-        <img src="/modern-solar-panel-installation-on-roof-with-blue-.jpg" alt="Solar Installation" className="w-full h-full object-cover" />
+        <img src={getAssetPath("/modern-solar-panel-installation-on-roof-with-blue-.jpg")} alt="Solar Installation" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
       </div>
 

@@ -9,7 +9,7 @@ export function News() {
       category: "公司新闻",
       date: "2025年10月8日",
       title: "绿色产业，光明未来：德业2025迪拜经销商峰会圆满举办",
-      excerpt: "2025年11月，德业集团在迪拜成功举办了"绿色产业，光明未来"经销商峰会，汇聚全球合作伙伴共商发展大计",
+      excerpt: "2025年11月，德业集团在迪拜成功举办了「绿色产业，光明未来」经销商峰会，汇聚全球合作伙伴共商发展大计",
       image: getAssetPath("/business-conference-dubai-skyline.jpg"),
       featured: true,
     },
